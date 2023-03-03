@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double fiyat, kdv1=0.18, kdv2=0.08;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Fiyat giriniz: ");
+
+        fiyat = inp.nextInt();
+        double kdv = 0<fiyat && fiyat <1000 ? fiyat*kdv1 : fiyat*kdv2;
+
+
+        System.out.println("KDV'siz fiyat: " + fiyat);
+        System.out.println("KDV tutarı: " + kdv);
+        System.out.println("Toplam tutar: " + (fiyat+kdv));
+
+
+    }
+}
